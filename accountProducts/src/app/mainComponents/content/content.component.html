@@ -1,0 +1,9 @@
+<!-- <app-dialog-content></app-dialog-content> -->
+
+<div class="contentContainer" *ngIf="products.length <= 0">
+    <h1>No products to Display</h1>
+</div>
+<div class="contentContainer" *ngIf="products.length > 0">
+    <app-dialog-content [buttonTitle]="item.productname" [dialog_body]="item.productname" [dialog_title]="item.productname" class="margin1rem" *ngFor="let item of products">
+    </app-dialog-content>
+</div>
