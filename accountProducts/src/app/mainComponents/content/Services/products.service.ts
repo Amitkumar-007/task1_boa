@@ -20,9 +20,11 @@ export class ProductsService {
     ];
   }
   ngOnInit() {}
-  getProducts(): Product[] {
-    console.log("getProducts",this.products);
-    return this.products;
+  // getProducts(): Product[] {
+  //   console.log("getProducts",this.products);
+  //   return this.products;
+  // }
+  getProducts(){
+    return this.http.get<Product[]>(this.url);
   }
-
 }

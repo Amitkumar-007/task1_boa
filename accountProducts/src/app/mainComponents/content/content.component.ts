@@ -12,7 +12,8 @@ export class ContentComponent {
     constructor(private productsService : ProductsService){}
 
     ngOnInit(){
-      this.products = this.productsService.getProducts();
+      // this.products = this.productsService.getProducts();
+      this.productsService.getProducts().subscribe(products => this.products = products);
       console.log(this.products);
     }
 }
